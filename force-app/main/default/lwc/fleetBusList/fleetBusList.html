@@ -1,0 +1,104 @@
+<template>
+    <div class="slds-align_absolute-top">
+        <div class="slds-box slds-theme_shade">
+            <table>
+                <tr>
+                    <td style="width:10%">
+                        <lightning-icon icon-name="custom:custom31" size="medium"></lightning-icon>
+                    </td>
+                    <td style="width:90%">
+                        <h1 style="font-size:1.1vw; text-indent:10px"> <b> Buses Inventory</b></h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <div class="slds-scrollable">
+            
+            <template for:each={busList} for:item="bus">
+                <div key={bus.Id} class="bus-card" onclick={handleBusClick} data-busid={bus.Id}>
+                    <div class="bus-caption">
+                        {bus.Name}
+                    </div>
+                    <div class="bus-image">
+                        <img src={bus.ImageUrl__c} alt="Bus Image" />
+                    </div>
+                    <div class="bus-caption">
+                        {bus.Current_Status__c}
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div class="bus-details-container" if:true={selectedBus}>
+            <div class="bus-details-text">
+                <p><b>Bus Details</b></p>
+            </div>
+            <div class="bus-details">
+                <template if:true={selectedBus}>
+                    <div class="bus-detail-row">
+                        <div class="bus-detail-label">Name:</div>
+                        <div class="bus-detail-value">
+                            <template if:true={editMode}>
+                                <lightning-input type="text" name='Name' value={selectedBus.Name} onchange={handleBusInputChange}></lightning-input>
+                            </template>
+                            <template if:false={editMode}>
+                                <a onclick={handleNameClick}>{selectedBus.Name}</a>
+                            </template>
+                        </div>
+                    </div>
+                    <div class="bus-detail-row">
+                        <div class="bus-detail-label">Year:</div>
+                        <div class="bus-detail-value">
+                            <template if:true={editMode}>
+                                <lightning-input type="number" name='Year__c' value={selectedBus.Year__c} onchange={handleBusInputChange} readonly></lightning-input>
+                            </template>
+                            <template if:false={editMode}>
+                                {selectedBus.Year__c}
+                            </template>
+                        </div>
+                    </div>
+                    <div class="bus-detail-row">
+                        <div class="bus-detail-label">Max Capacity:</div>
+                        <div class="bus-detail-value">
+                            
+                            <template if:true={editMode}>
+                                <lightning-input type="number" name='Maximum_Capacity__c' value={selectedBus.Maximum_Capacity__c} onchange={handleBusInputChange} readonly></lightning-input>
+                            </template>
+                            <template if:false={editMode}>
+                                {selectedBus.Maximum_Capacity__c}
+                            </template>
+                        </div>
+                    </div>
+                    <div class="bus-detail-row">
+                        <div class="bus-detail-label">Odometer:</div>
+                        <div class="bus-detail-value">
+                            <template if:true={editMode}>
+                                <lightning-input type="number" name='Odometer_Reading__c' value={selectedBus.Odometer_Reading__c} onchange={handleBusInputChange}></lightning-input>
+                            </template>
+                            <template if:false={editMode}>
+                                {selectedBus.Odometer_Reading__c}
+                            </template>
+                        </div>
+                    </div>
+                </template>
+                <div class="button-container">
+                    <template if:true={selectedBus}>
+                        <template if:true={editMode}>
+                            <lightning-button label="Save" variant="brand" onclick={handleSaveClick} class="edit-button"></lightning-button>
+                            <lightning-button label="Cancel" variant="neutral" onclick={handleCancelClick}></lightning-button>
+                        </template>
+                        <template if:false={editMode}>
+                            <lightning-button label="Edit" variant="brand" onclick={handleEditClick} class="edit-button"></lightning-button>
+                            <lightning-button label="Cancel" variant="neutral" onclick={handleCancelClick}></lightning-button>
+                        </template>
+                    </template>
+                </div>
+            </div>
+            <div if:true={resaleValue} class="resale-tile">
+                <p>Resale Value:</p>
+                <p>{resaleValue}</p>
+            </div>
+        </div>
+    </div>
+</template>

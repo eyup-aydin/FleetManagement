@@ -1,0 +1,13 @@
+<!-- busRecordForm.html -->
+<template>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <!-- Bus list component -->
+            <c-bus-list onbusselect={handleBusSelect}></c-bus-list>
+        </div>
+        <div class="slds-col">
+            <!-- Bus record detail and edit form -->
+            <c-bus-detail-edit record-id={selectedBusId}></c-bus-detail-edit>
+        </div>
+    </div>
+</template>

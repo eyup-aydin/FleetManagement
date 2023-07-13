@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+<types>
+        <!-- Bus__c object -->
+        <members>Bus__c</members>
+        <members>Bus__c-Bus Layout</members> <!-- Replace <YourPageLayoutApiName> with the actual API name of your Bus__c object's page layout -->
+        <name>Layout</name>
+    </types>
+    <types>
+        <!-- Garage__c object -->
+        <members>Garage__c</members>
+        <members>Garage__c-Garage Layout</members> <!-- Replace <YourPageLayoutApiName> with the actual API name of your Garage__c object's page layout -->
+        <name>Layout</name>
+    </types>
+    <types>
+        <!-- Maintenance__c object -->
+        <members>Maintenance__c</members>
+        <members>Maintenance__c-Maintenance Layout</members> <!-- Replace <YourPageLayoutApiName> with the actual API name of your Maintenance__c object's page layout -->
+        <name>Layout</name>
+    </types>
+    <version>57.0</version>
+</Package>

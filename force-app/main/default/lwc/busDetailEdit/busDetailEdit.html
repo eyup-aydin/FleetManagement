@@ -1,0 +1,44 @@
+<!-- busDetailEdit.html -->
+<template>
+    <lightning-card title="Bus Details">
+        <div class="slds-m-around_medium">
+            <template if:true={recordId}>
+                <template if:true={editMode}>
+                    <lightning-record-edit-form
+                        object-api-name="Bus__c"
+                        record-id={recordId}
+                        onsuccess={handleSuccess}
+                    >
+                        <lightning-messages></lightning-messages>
+
+                        <lightning-input-field field-name="Name"></lightning-input-field>
+                        <lightning-input-field field-name="Year__c"></lightning-input-field>
+                        <lightning-input-field field-name="Maximum_Capacity__c"></lightning-input-field>
+                        <lightning-input-field field-name="Odometer_Reading__c"></lightning-input-field>
+
+                        <div class="slds-m-top_medium">
+                            <lightning-button variant="brand" type="submit" name="save" label="Save"></lightning-button>
+                            <lightning-button variant="neutral" onclick={handleCancel} name="cancel" label="Cancel"></lightning-button>
+                        </div>
+                    </lightning-record-edit-form>
+                </template>
+
+                <template if:false={editMode}>
+                    <lightning-record-view-form
+                        object-api-name="Bus__c"
+                        record-id={recordId}
+                    >
+                        <lightning-output-field field-name="Name"></lightning-output-field>
+                        <lightning-output-field field-name="Year__c"></lightning-output-field>
+                        <lightning-output-field field-name="Maximum_Capacity__c"></lightning-output-field>
+                        <lightning-output-field field-name="Odometer_Reading__c"></lightning-output-field>
+
+                        <div class="slds-m-top_medium">
+                            <lightning-button variant="brand" onclick={handleEdit} name="edit" label="Edit"></lightning-button>
+                        </div>
+                    </lightning-record-view-form>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

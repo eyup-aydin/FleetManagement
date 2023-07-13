@@ -1,0 +1,13 @@
+<!-- busList.html -->
+<template>
+    <lightning-card title="Bus List">
+        <template if:true={busList.data}>
+            <template for:each={busList.data} for:item="bus">
+                <p key={bus.Id} class="slds-p-around_medium" onclick={handleBusClick}>
+                    <img src={bus.ImageUrl__c} alt="Bus Image"/>
+                    <b>{bus.Name}</b>
+                </p>
+            </template>
+        </template>
+    </lightning-card>
+</template>
