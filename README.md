@@ -1,18 +1,43 @@
-# Salesforce DX Project: Next Steps
+# Fleet Bus Management System in Salesforce
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+The Fleet Management System is a Salesforce application developed with Lightning Web Components (LWC) and Apex. It is designed to manage a fleet of Buses (including their attributes like name, year, maximum capacity, odometer reading, and the current resale value and images), Garage and Maintenance.
 
-## How Do You Plan to Deploy Your Changes?
+## Features
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+- Display a list of buses with LWC (fleetBusList)
+- When you click any of the buses, and see the details of the bus and also resale value of it if the buses is active
+- Update Bus attributes
+- Navigate to the detailed view of a selected Bus
 
-## Configure Your Salesforce DX Project
+## Prerequisites
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Before you begin, ensure you have met the following requirements:
+- You have a Salesforce Developer Edition.
+- You have installed Salesforce CLI.
 
-## Read All About It
+## Installation
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+To install the Fleet Bus Management System, follow these steps:
+
+1. Clone the repo: `git clone https://github.com/YourUsername/YourRepo.git`
+2. Navigate to the project folder: `cd YourRepo`
+3. Deploy to Salesforce: `sfdx force:source:deploy -x manifest/package.xml`
+
+## Usage 
+
+To use the Fleet Bus Management System, open the `FleetBusList` component in your Salesforce org.
+
+## Contributing
+
+To contribute to the Fleet Management System, follow these steps:
+
+1. Fork this repository.
+2. Create a branch: `git checkout -b <branch_name>`
+3. Make your changes and commit them: `git commit -m '<commit_message>'`
+4. Push to the original branch: `git push origin <project_name>/<location>`
+5. Create the pull request.
+
+## Contact
+
+If you want to contact me you can reach me at `joby.aydin@hotmail.com`.
+
