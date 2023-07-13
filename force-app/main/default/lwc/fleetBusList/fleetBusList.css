@@ -16,19 +16,16 @@
     justify-items: center;
     height: auto;
     width: auto;
+    border-radius: 5px;
 }
 
 .bus-card {
     cursor: pointer;
     width: 12rem;
     text-align: left;
-    border: 1px solid #ccc;
     border-radius: 5px;
     padding: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 2px;
-    margin-right: 2px;
+
 }
 .bus-caption{
     text-align: center;
@@ -45,6 +42,7 @@
     grid-column: 3 / 3;
     border: 1px solid #ccc;
     margin-left: 2rem;
+    border-radius: 5px;
 }
 
 .bus-details-text{
@@ -57,16 +55,16 @@
 .bus-details {
     grid-row: 1 / 3;
     grid-column: 3 / 3;
-    border: 1px solid #ccc;
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 3rem;
 }
 
 .bus-detail-row {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
 .bus-detail-label {
@@ -82,9 +80,6 @@
     margin-top: 1rem;
     font-weight: bold;
     text-align: center;
-    grid-row: 3 / 5;
-    grid-column: 3 / 3;
-    border: 1px solid #ccc;
     margin-left: 1rem;
     margin-bottom: 1rem;
     margin-right: 1rem;
