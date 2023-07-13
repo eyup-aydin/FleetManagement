@@ -2,14 +2,14 @@
     <div class="slds-align_absolute-top">
         <div class="slds-box slds-theme_shade">
             <table>
-                <tr>
-                    <td style="width:10%">
-                        <lightning-icon icon-name="custom:custom31" size="medium"></lightning-icon>
-                    </td>
-                    <td style="width:90%">
-                        <h1 style="font-size:1.1vw; text-indent:10px"> <b> Buses Inventory</b></h1>
-                    </td>
-                </tr>
+                <tbody><tr>
+                        <td style="width:10%">
+                            <lightning-icon icon-name="custom:custom31" size="medium"></lightning-icon>
+                        </td>
+                        <td style="width:90%">
+                            <h1 style="font-size:1.1vw; text-indent:10px"> <b> Buses Inventory</b></h1>
+                        </td>
+                    </tr></tbody>
             </table>
         </div>
     </div>
@@ -19,14 +19,14 @@
                 <div key={bus.Id} class="bus-card" onclick={handleBusClick} data-busid={bus.Id}>
                     <div class="slds-box slds-theme_shade">
                         <table>
-                            <tr>
+                            <tbody><tr>
                                 <td style="width:5%">
                                     <lightning-icon icon-name="utility:product" size="x-small"></lightning-icon>
                                 </td>
                                 <td style="width:90%">
                                     <h1 style="font-size:0.7vw; text-indent:5px"> <b> {bus.Name}</b></h1>
                                 </td>
-                            </tr>
+                            </tr></tbody>
                         </table>
                     </div>
                     <div class="bus-image">
@@ -41,14 +41,14 @@
         <div class="bus-details-container" if:true={selectedBus}>
             <div class="slds-box slds-theme_shade">
                 <table>
-                    <tr>
+                    <tbody><tr>
                         <td style="width:5%">
                             <lightning-icon icon-name="utility:bookmark" size="small"></lightning-icon>
                         </td>
                         <td style="width:90%">
                             <h1 style="font-size:0.8vw; text-indent:7px"> <b>Bus Details</b></h1>
                         </td>
-                    </tr>
+                    </tr></tbody>
                 </table>
             </div>
             <div class="bus-details">
@@ -113,14 +113,14 @@
             </div>
             <div if:true={resaleValue} class="slds-box slds-theme_shade">
                 <table>
-                    <tr>
+                    <tbody><tr>
                         <td style="width:5%">
                             <lightning-icon icon-name="utility:adjust_value" size="small"></lightning-icon>
                         </td>
                         <td style="width:90%">
                             <h1 style="font-size:0.8vw; text-indent:7px"> <b>Resale Value</b></h1>
                         </td>
-                    </tr>
+                    </tr></tbody>
                 </table>
             </div>
             <div  class="resale-tile">
