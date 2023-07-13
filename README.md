@@ -37,6 +37,9 @@ To contribute to the Fleet Management System, follow these steps:
 4. Push to the original branch: `git push origin <project_name>/<location>`
 5. Create the pull request.
 
+## ER Diagram
+![Screenshot 2023-07-13 at 12 37 16 AM](https://github.com/eyup-aydin/FleetManagement/assets/41606948/6f1d9372-6d08-4e59-906f-0b301a661d95)
+
 ## Contact
 
 If you want to contact me you can reach me at `joby.aydin@hotmail.com`.
