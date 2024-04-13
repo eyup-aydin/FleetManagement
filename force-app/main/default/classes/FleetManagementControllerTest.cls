@@ -10,12 +10,11 @@ public class FleetManagementControllerTest {
         insert busList;
 
         Test.startTest();
-
         List<Bus__c> result = FleetManagementController.getBusList();
         Integer expectedSize = 5;
-        System.assertEquals(expectedSize, result.size());
-
         Test.stopTest();
+
+        System.assertEquals(expectedSize, result.size());
     }
 
     @isTest 
@@ -54,12 +53,11 @@ public class FleetManagementControllerTest {
         insert bus;
 
         Test.startTest();
-
         Decimal expectedResaleValue = (120000- ((110000 - 100000) * 0.10));
         Decimal result = FleetManagementController.getResaleValue(bus.Id);
-        System.assertEquals(expectedResaleValue, result);
-
         Test.stopTest();
+
+        System.assertEquals(expectedResaleValue, result);
     }
     
     @isTest
@@ -71,12 +69,11 @@ public class FleetManagementControllerTest {
         insert bus;
 
         Test.startTest();
-
         Decimal expectedResaleValue = (160000-((110000-100000)*0.1)) + (160000*0.03) ;
         Decimal result = FleetManagementController.getResaleValue(bus.Id);
-        System.assertEquals(expectedResaleValue, result);
-
         Test.stopTest();
+
+        System.assertEquals(expectedResaleValue, result);
     }
     
     @isTest
@@ -88,12 +85,11 @@ public class FleetManagementControllerTest {
         insert bus2;
 
         Test.startTest();
-
         Decimal expectedResaleValue2 = null;
         Decimal result2 = FleetManagementController.getResaleValue(bus2.Id);
-        System.assertEquals(expectedResaleValue2, null);
-
         Test.stopTest();
+
+        System.assertEquals(expectedResaleValue2, null);
     }
     
     @isTest
@@ -105,12 +101,11 @@ public class FleetManagementControllerTest {
         insert bus;
 
         Test.startTest();
-
         Decimal expectedResaleValue = (160000-((110000-100000)*0.1)) + (160000*0.03) + (160000*0.34) ;
         Decimal result = FleetManagementController.getResaleValue(bus.Id);
-        System.assertEquals(expectedResaleValue, result);
-
         Test.stopTest();
+
+        System.assertEquals(expectedResaleValue, result);
     }
     
     @isTest
@@ -122,11 +117,10 @@ public class FleetManagementControllerTest {
         insert bus;
 
         Test.startTest();
-
         Decimal expectedResaleValue = null ;
         Decimal result = FleetManagementController.getResaleValue(bus.Id);
-        System.assertEquals(expectedResaleValue, result);
-
         Test.stopTest();
+
+        System.assertEquals(expectedResaleValue, result);
     }
 }
